@@ -8,12 +8,12 @@ import SinglePost from './pages/SinglePost';
 import ProtectedRoutes from './pages/ProtectedRoutes';
 import SharedMainLayout from './pages/SharedMainLayout';
 import NotFound from './pages/NotFound';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
 
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop>
         <Routes>
           <Route element={<ProtectedRoutes ><SharedMainLayout /></ProtectedRoutes>}>
@@ -26,7 +26,7 @@ const App = () => {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </ScrollToTop>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
