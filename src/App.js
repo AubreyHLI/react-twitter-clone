@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import ScrollToTop from './utils/scrollToTop';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import SinglePost from './pages/SinglePost';
+import ProtectedRoutes from './pages/ProtectedRoutes';
+import SharedMainLayout from './pages/SharedMainLayout';
+import NotFound from './pages/NotFound';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <ScrollToTop>
+        <Routes>
+          <Route element={<ProtectedRoutes ><SharedMainLayout /></ProtectedRoutes>}>
+              <Route path='/' exact element={<Home />} />
+              <Route path=":IdOfPost" element={<SinglePost />}/> 
+          </Route>
+
+          <Route path="/Login" element={<Login />}/>
+          <Route path="/Signup" element={<Signup />}/>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </ScrollToTop>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,40 @@
+.commentInfo {
+    display: flex;
+    flex-direction: row;
+    padding: 8px 0;
+    border-bottom: solid 1px var(--twitter-bg);
+}
+
+.comment_body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.comment_like {
+    color: gray;
+}
+
+.comment_like .toolbox svg {
+    width: 18px;
+    height: 18px;
+}
+
+.comment_like .UnLike svg {
+    color: rgb(249, 24, 128);
+}
+.comment_stati {
+    color: gray;
+    font-size: 13px;
+    display: flex;
+    gap: 20px;
+}
+.comment_delete {
+    cursor: pointer;
+    transition: color .2s ease;
+}
+.comment_delete:hover {
+    color:  var(--twitter-color);
+}
+
+

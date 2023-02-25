@@ -1,0 +1,71 @@
+.sidebarLink {
+    padding: 8px;
+    transition: all .2s;
+    border-radius: 30px;
+    margin-bottom: 2px;
+}
+.sidebarLink:hover {
+    background-color: #0f14191a;
+}
+@media (min-width: 480px) {
+    .sidebarLink {
+        padding: 12px;
+    }
+}
+
+.sidebarLink a{
+    text-decoration: none;
+    color: black;
+}
+
+.sidebarOption {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;  
+}
+
+.sidebarOption h2 {
+    margin: 0 16px;
+    font-size: 20px;
+    font-weight: 500;
+    display: none;
+    transition: all .2s ease;
+}
+@media (min-width: 1150px) {
+    .sidebarOption h2 {
+        display: inline;
+    }
+}
+
+.sidebarOption .icon {
+    font-size: 30px;
+}
+
+.sidebarOption-active a{
+    color: var(--twitter-color);
+}
+.sidebarOption-active h2 {
+    font-weight: 800;
+}
+.sidebaroption-hide {
+    display: none;
+}
+@media (min-width: 480px) {
+    .sidebaroption-hide{
+        display: flex;
+    }
+}
+@media (max-height: 700px) {
+    .Bookmarks {
+        display: none;
+    }
+}
+@media (max-height: 640px) {
+    .Notifications {
+        display: none;
+    }
+}
+
+
+

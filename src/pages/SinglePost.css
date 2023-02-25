@@ -1,0 +1,14 @@
+.singlePost .main-header {
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.comments-container {
+    border-top: solid 1px var(--twitter-bg);
+    padding: 0 16px 20px;
+    margin-bottom: 60px;
+}
+
+.comments_header {
+    padding: 12px 0;
+}

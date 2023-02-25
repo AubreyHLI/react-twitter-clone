@@ -1,0 +1,183 @@
+.tweetBox {
+    display: flex;
+    flex-direction: row;
+}
+
+.avatar {
+    width: 50px !important;
+    height: 50px !important;
+    margin-right: 8px;
+}
+
+.tweetBox > form {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 12px; */
+}
+
+.tweetBox_input_container {
+    margin-left: 5px;
+    display: flex;
+}
+
+.tweetBox_input_container textarea {
+    flex-grow: 1;
+    word-wrap: break-word;
+    font-size: 20px;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 10px 2px 0 2px;
+    outline: none;
+    border: none;
+    resize: none;
+    height: auto;
+    max-height: 330px;
+    padding-bottom: 24px;
+    overflow-y: hidden;
+    color: var(--font-color);
+}
+
+textarea::-webkit-scrollbar {
+    width: 0;
+}
+
+
+.tweetBox_image_container {
+    position: relative;
+}
+
+.tweetBox_image_container img {
+    border-radius: 20px;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+
+.close_btn {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 32px;
+    height: 32px;
+    background-color: rgba(15, 20, 25, 0.75);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity .2s ease;
+}
+.close_btn:hover {
+    opacity: 0.9;
+}
+
+.close_btn svg {
+    font-size: 20px !important;
+    color: white;
+}
+
+.privacy-container {
+    border-bottom: 1px solid var(--twitter-bg);
+    padding-bottom: 12px;
+}
+
+.privacy {
+    margin-left: -4px;
+    padding: 0 8px;
+    display: inline-flex;
+    align-items: center;
+    color: var(--twitter-color);
+    border-radius: 50px;
+    transition: background-color 0.2s ease;
+}
+
+.privacy svg {
+    width: 16px;
+    height: 16px;
+}
+
+.privacy span {
+    font-size: 14px;
+    margin-left: 2px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.privacy:hover {
+    background-color: #e7f5fe;
+}
+
+
+
+ /* attachment */
+ .attachment-container {
+    display: inline-flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    margin-left: -4px;
+    color: var(--twitter-color);
+}
+
+.attachment-options {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.attachment-options .toolbox svg {
+    width: 22px;
+    height: 22px;
+}
+
+.attachment-options li {
+    position: relative;
+}
+
+.attachment-options li:hover .iconBox{
+    background-color: #e7f5fe;
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+.emoji_picker {
+    position: absolute;
+    top: 100%;
+    margin-top: 2px;
+    margin-left: -100px;
+    max-width: 320px;
+    border-radius: 20px;
+    z-index: 10;
+}
+
+em-emoji-picker {
+    max-height: 400px;
+}
+
+
+.submitBtn {
+    background-color: var(--twitter-color);
+    color: white;
+    font-weight: 900;
+    border: none;
+    border-radius: 30px;
+    height: 36px;
+    width: 74px;
+    margin-right: 12px;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+

@@ -1,0 +1,63 @@
+.login-input {
+    margin: 24px 0;
+    position: relative;
+}
+
+.login-input_active {
+    border: 2px solid var(--twitter-color);
+}
+.login-input input {
+    width: 100%;
+    height: 56px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 4px;
+    padding: 30px 10px 12px;
+    margin: 12px 0;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+.login-input .placeholder {
+    position: absolute;
+    left: 10px;
+    color: rgb(147, 145, 145);
+    transition: all .2s ease;
+}
+
+.label_inactive {
+    top: -12px;
+    font-size: large;
+}
+
+input:active + .placeholder,
+input:focus + .placeholder {
+    color: var(--twitter-color);
+    top: -22px;
+    font-size: 14px;
+}
+
+.label_active {
+    top: -22px;
+    font-size: 14px;
+}
+
+input:active,
+input:focus {
+    border: 2px solid var(--twitter-color);
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+#password, #confirmPassword {
+    padding-right: 40px;
+}
+
+.password-eye {
+    position: absolute;
+    right: 10px;
+    bottom: -4px;
+}
+.password-eye svg {
+    font-size: 20px;
+    color: #abaaaa;
+}

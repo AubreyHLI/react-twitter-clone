@@ -1,0 +1,53 @@
+
+.toolbox {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toolbox > * {
+    transition: all .2s ease;
+}
+
+
+.toolbox .iconBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.toolbox .stati {
+    padding: 0 12px 0 6px;
+}
+
+
+.tooltip {
+    width: fit-content;
+    color: #fff;
+    background-color: rgb(90, 96, 100, 0.8);
+    font-size: 11px;
+    font-weight: 500;
+    padding: 2px 4px;
+    border-radius: 2px;
+    text-align: center;
+    
+    position: absolute;
+    top: 105%;
+    z-index: 1;
+    visibility: hidden;
+    transition: visibility .1s 0 ease; /* delay in*/
+    -webkit-transition: visibility .1s 0 ease; /* delay in*/
+}
+
+.toolbox:hover .tooltip {
+    visibility: visible;
+    transition: visibility .1s .9s ease; /* instant off */
+    -webkit-transition: visibility .1s .9s ease; /* instant off */
+}
+
