@@ -36,10 +36,10 @@ const Sidebar = ({showAccountChange, setShowAccountChange}) => {
     });
 
 
-    const handleSwitchAccount = () => {
-        setShowAccountChange(false);
-        navigate('/Login');
-    }
+    // const handleSwitchAccount = () => {
+    //     setShowAccountChange(false);
+    //     navigate('/Login');
+    // }
 
     const handleLogout = async() => {
         try{

@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import './UserAuth.css';
-import CloseIcon from '@mui/icons-material/Close';
+// import CloseIcon from '@mui/icons-material/Close';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import Input from '../components/Input';
 import { auth } from '../firebase';

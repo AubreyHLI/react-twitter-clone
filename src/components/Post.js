@@ -15,14 +15,12 @@ import { ref, deleteObject } from "firebase/storage";
 import { collection, deleteDoc, doc, onSnapshot, setDoc, orderBy, query } from "@firebase/firestore";
 import { useRecoilState } from 'recoil';
 import { modalState, postIdState } from '../atoms/modalAtom';
-import { backHomeState } from '../atoms/locationAtom';
 import { useNavigate } from 'react-router-dom';
 import Moment from 'react-moment';
 
 
 
 const Post = ({id, post, postPage, currentAccount, recordScrollY}) => {
-    const [backHome, setBackHome] = useRecoilState(backHomeState);
     const [isOpen, setIsOpen] = useRecoilState(modalState);
     const [postId, setPostId] = useRecoilState(postIdState);
     const [comments, setComments] = useState([]);
